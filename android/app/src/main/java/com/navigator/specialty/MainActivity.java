@@ -1,4 +1,4 @@
-package com.diploma.diploma;
+package com.navigator.specialty;
 
 import io.flutter.embedding.android.FlutterActivity;
 
