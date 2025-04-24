@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:location/location.dart';
 import '../constans/app_colors.dart';
@@ -14,11 +13,9 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   final Completer<GoogleMapController> _controller = Completer();
-
-  static const LatLng sourceLocation = LatLng(37.33500926, -122.03272188);
   LocationData? currentLocation;
 
-  void getCurrentLocation() async {
+  void getCurrentLocation() {
     Location location = Location();
 
     location.getLocation().then((location) {
