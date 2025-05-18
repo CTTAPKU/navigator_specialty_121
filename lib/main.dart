@@ -11,7 +11,7 @@ void main() async {
   await dotenv.load(fileName: "data.env");
   runApp(
     MaterialApp(
-      home: const MapScreen(),
+      home: const WelcomePage(),
     ),
   );
 }

@@ -31,12 +31,10 @@ class _IndoorMapState extends State<IndoorMap> {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: InteractiveViewer(
-        transformationController: _controller,
-        child: Image.asset("assets/images/firstFloor.jpg"),
-        constrained: false,
-      ),
+    return InteractiveViewer(
+      transformationController: _controller,
+      child: Image.asset("assets/images/firstFloor.jpg"),
+      constrained: false,
     );
   }
 }
