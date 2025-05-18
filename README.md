@@ -7,6 +7,8 @@
 ## Використані технології
 * Dart
 * Flutter
+* Directions API
+* Maps SDK for Android
+* Firebase
 ## Опублікований продукт
-Інсталяційний пакет створеного додатку можна завантажити з магазину
-...
+Інсталяційний пакет створеного додатку можна завантажити з [Release](https://github.com/CTTAPKU/navigator_specialty_121/releases)
