@@ -1,9 +1,15 @@
 import 'package:diploma/pages/map_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import '../constans/app_colors.dart';
 
 class WelcomePage extends StatelessWidget {
   const WelcomePage({super.key});
+
+  void saveCheckboxStatus() async {
+    final prefs = await SharedPreferences.getInstance();
+    await prefs.setBool("loginStatus", true);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -45,6 +51,7 @@ class WelcomePage extends StatelessWidget {
             padding: EdgeInsets.symmetric(vertical: 80),
             child: TextButton(
               onPressed: () {
+                saveCheckboxStatus();
                 Navigator.pushReplacement(
                     context,
                     MaterialPageRoute(builder: (context) => const MapScreen())

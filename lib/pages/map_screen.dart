@@ -84,8 +84,8 @@ class _MapScreenState extends State<MapScreen> {
         onDestinationSelected: (i) => setState(() => currentPageIndex = i),
         destinations: [
           NavigationDestination(icon: Icon(Icons.map, color: AppColors.text), label: "Шлях до коледжу"),
-          NavigationDestination(icon: Icon(Icons.home_rounded, color: AppColors.text), label: "Мапа коледжу"),
-          NavigationDestination(icon: Icon(Icons.home_rounded, color: AppColors.text), label: "Про спеціальність"),
+          NavigationDestination(icon: Icon(Icons.apartment, color: AppColors.text), label: "Мапа коледжу"),
+          NavigationDestination(icon: Icon(Icons.book, color: AppColors.text), label: "Про спеціальність"),
         ],
       ),
       body: IndexedStack(index: currentPageIndex, children: screens),
