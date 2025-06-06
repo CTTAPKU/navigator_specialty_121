@@ -43,6 +43,7 @@ dependencies:
   flutter_native_splash: ^2.4.6
   firebase_core: ^3.13.1
   cloud_firestore: ^5.6.8
+  youtube_player_flutter: ^9.1.1
 
 flutter_native_splash:
   color: "#fdfffc"

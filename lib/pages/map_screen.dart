@@ -18,8 +18,8 @@ class MapScreen extends StatefulWidget {
 
 class _MapScreenState extends State<MapScreen> {
   bool _isInsideZone = false;
-  LatLng leftCorner = LatLng(49.588146979696404, 34.54255187102403);
-  LatLng rightCorner = LatLng(49.587301908027996, 34.54306953730695);
+  LatLng leftCorner = LatLng(49.58819154508045, 34.54258257786253);
+  LatLng rightCorner = LatLng(49.58728387575328, 34.543110973051284);
   int currentPageIndex = 0;
   final screens = const [MapToCollege(), IndoorMap(), AboutSpecialtyScreen()];
   final List<String> titles = ["Шлях до коледжу", "Мапа коледжу", "Про спеціальність"];

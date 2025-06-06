@@ -6,6 +6,8 @@ import '../constans/app_colors.dart';
 import 'map_screen.dart';
 
 class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
   _SplashScreenState createState() => _SplashScreenState();
 }
@@ -32,7 +34,7 @@ class _SplashScreenState extends State<SplashScreen> {
     return Scaffold(
       backgroundColor: AppColors.background,
       body: Center(
-        child: CircularProgressIndicator(), // або твій логотип
+        child: CircularProgressIndicator(),
       ),
     );
   }
