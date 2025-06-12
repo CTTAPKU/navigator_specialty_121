@@ -1,4 +1,4 @@
-import 'package:diploma/pages/map_screen.dart';
+import 'package:diploma/pages/map/map_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../constans/app_colors.dart';

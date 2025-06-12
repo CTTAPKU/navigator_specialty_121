@@ -76,42 +76,51 @@ class _MapToCollegeState extends State<MapToCollege> {
 
   @override
   Widget build(BuildContext context) {
-    return currentLocation == null
-        ? Center(child: CircularProgressIndicator())
-        : GoogleMap(
-          initialCameraPosition: CameraPosition(
-            target: LatLng(
-              currentLocation!.latitude!,
-              currentLocation!.longitude!,
-            ),
-            zoom: 15,
-          ),
-          polylines: {
-            Polyline(
-              polylineId: PolylineId("route"),
-              points: polylineCoordinates,
-              color: AppColors.accent,
-            ),
-          },
-          markers: {
-            Marker(
-              markerId: MarkerId("destination"),
-              position: destination,
-              icon: destinationIcon,
-            ),
-            Marker(
-              markerId: MarkerId("currentLoc"),
-              position: LatLng(
+    return Scaffold(
+      backgroundColor: AppColors.background,
+      appBar: AppBar(
+      backgroundColor: AppColors.secondaryBackground,
+      title: Text("Шлях до коледжу", style: TextStyle(color: AppColors.text, fontFamily: 'NotoSans')),
+      centerTitle: true,
+      shape: Border(bottom: BorderSide(color: AppColors.primary, width: 2)),
+    ),
+      body: currentLocation == null
+          ? Center(child: CircularProgressIndicator())
+          : GoogleMap(
+            initialCameraPosition: CameraPosition(
+              target: LatLng(
                 currentLocation!.latitude!,
                 currentLocation!.longitude!,
               ),
-              icon: userCurrentLocationIcon,
+              zoom: 15,
             ),
-          },
-          onMapCreated: (mapController) {
-            _controller.complete(mapController);
-          },
-          mapToolbarEnabled: false,
-        );
+            polylines: {
+              Polyline(
+                polylineId: PolylineId("route"),
+                points: polylineCoordinates,
+                color: AppColors.accent,
+              ),
+            },
+            markers: {
+              Marker(
+                markerId: MarkerId("destination"),
+                position: destination,
+                icon: destinationIcon,
+              ),
+              Marker(
+                markerId: MarkerId("currentLoc"),
+                position: LatLng(
+                  currentLocation!.latitude!,
+                  currentLocation!.longitude!,
+                ),
+                icon: userCurrentLocationIcon,
+              ),
+            },
+            onMapCreated: (mapController) {
+              _controller.complete(mapController);
+            },
+            mapToolbarEnabled: false,
+          ),
+    );
   }
 }
